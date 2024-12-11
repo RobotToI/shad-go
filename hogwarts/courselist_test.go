@@ -28,8 +28,11 @@ func impl(t *testing.T, prereqs map[string][]string, courseList []string) {
 
 func TestGetCourseList_computerScience(t *testing.T) {
 	var computerScience = map[string][]string{
-		"algorithms": {"data structures"},
-		"calculus":   {"linear algebra"},
+		"intro to programming":  {},
+		"computer organization": {},
+		"linear algebra":        {},
+		"algorithms":            {"data structures"},
+		"calculus":              {"linear algebra"},
 		"compilers": {
 			"data structures",
 			"formal languages",
@@ -48,6 +51,7 @@ func TestGetCourseList_computerScience(t *testing.T) {
 
 func TestGetCourseList_linearScience(t *testing.T) {
 	var linearScience = map[string][]string{
+		"0": {},
 		"1": {"0"},
 		"2": {"1"},
 		"3": {"2"},
@@ -93,6 +97,7 @@ func TestGetCourseList_weirdScience(t *testing.T) {
 
 func TestGetCourseList_strangeScience(t *testing.T) {
 	var strangeScience = map[string][]string{
+		"0": {},
 		"1": {"0"},
 		"2": {"1", "3"},
 		"3": {"2"},
